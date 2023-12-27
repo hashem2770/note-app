@@ -21,13 +21,18 @@ class NoteItem extends StatelessWidget {
           ListTile(
             title: Text(
               title,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
               style: const TextStyle(color: Colors.black,fontSize: 26),
             ),
             subtitle: Padding(
-              padding: const EdgeInsets.only(top: 12.0),
+              padding: const EdgeInsets.only(top: 8.0,bottom: 12),
               child: Text(
                 subTitle,
-                style:  TextStyle(color: Colors.black.withOpacity(.5),fontSize: 20,height: 1.6),
+                maxLines: 2,
+                overflow: TextOverflow.ellipsis,
+
+                style:  TextStyle(color: Colors.black.withOpacity(.5),fontSize: 20,height: 1.5),
               ),
             ),
             trailing: IconButton(
