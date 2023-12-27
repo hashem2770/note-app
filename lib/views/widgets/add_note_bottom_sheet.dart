@@ -12,7 +12,9 @@ class AddNoteBottomSheet extends StatelessWidget {
       child: Column(
         children: [
           SizedBox(height: 22,),
-          CustomTextField(),
+          CustomTextField(hint: 'Title',),
+          SizedBox(height: 18,),
+          CustomTextField(hint: 'Content',maxLine: 5,),
         ],
       ),
     );
