@@ -15,14 +15,18 @@ class NotesListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView.separated(
-      separatorBuilder: (context,i)=>const SizedBox(height: 8,),
-      itemBuilder: (context, index) {
-        return  NoteItem(
-            title: 'Flutter Tips',
-            subTitle: 'build your career with Hashem Hassen',
-        color: colors[index],
-        );
-      }, itemCount: 5,);
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 12.0),
+      child: ListView.separated(
+        padding: EdgeInsets.zero,
+        separatorBuilder: (context,i)=>const SizedBox(height: 8,),
+        itemBuilder: (context, index) {
+          return  NoteItem(
+              title: 'Flutter Tips',
+              subTitle: 'build your career with Hashem Hassen',
+          color: colors[index],
+          );
+        }, itemCount: 5,),
+    );
   }
 }
